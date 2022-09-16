@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --dark-bg: #171717;
+  --gray-font: #323232;
+  --selected: #3662CC;
+}
+
+body {
+  background: var(--dark-bg);
+  padding: 0;
+  margin: 0;
+  color: var(--gray-font);
+  display: flex;
+  flex-direction: row;
+  height: 92vh;
+}
+
+nav  {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 1rem;
+  border-right: 2px solid var(--gray-font);
+  width: 20rem;
+  height: 100%;
+  gap: 3px;
+  transform: translateY(1rem);
+}
+
+
+.profile {
+  display: flex;
+  color: white;
+  background: #6a6a6a;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 2rem;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.name-icon {
+  height: 3rem;
+  width: 3rem;
+  background: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px ;
+}
+nav > div:not(.profile) {
+  padding-left: 2rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.selected {
+  background: var(--selected);
+  color: white;
+}
+
+nav > div:not(.profile):not(.selected):hover {
+  background: #6a6a6a;
+}
+
+.habits-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 72rem;
+  margin: 0px 1rem 0px 1rem;
+  border-bottom: 2px solid var(--gray-font);
+}
+
+.add-habit {
+  background: var(--selected);
+  height: 70%;
+  width: 8rem;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-habit:hover {
+  background: #6a81b8;
+}
+
+.habits {
+  display: flex;
+  margin: 0px 1rem 0px 1rem;
+  padding-top: 2rem;
+  color: white;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.habit {
+  background: #3662CC;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+  justify-content: space-between;
+  border-radius: 7px;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.description {
+  font-size: medium;
+  font-weight: 500;
+  color:#bccef8;
+}
+.info {
+  display: flex;
+  gap: 1rem;
+  font-size: 30px;
+}
+.info * {
+  cursor: pointer;
+}
+.bi-trash {
+  color: rgb(243, 64, 64);
+}
